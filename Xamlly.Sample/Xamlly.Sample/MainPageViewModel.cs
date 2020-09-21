@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 
@@ -11,6 +12,7 @@ namespace Xamlly.Sample
     public class MainPageViewModel : INotifyPropertyChanged
     {
         private ObservableCollection<Option> options;
+        private Option selectedOption;
 
         public ObservableCollection<Option> Options
         {
@@ -21,6 +23,16 @@ namespace Xamlly.Sample
                 OnPropertyChanged();
             }
         }
+
+        public Option SelectedOption {
+            get => selectedOption;
+            set
+            {
+                selectedOption = value;
+                OnPropertyChanged();
+            }
+        }
+
         public MainPageViewModel()
         {
             Options = new ObservableCollection<Option>(new List<Option>

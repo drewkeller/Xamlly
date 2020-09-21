@@ -50,7 +50,7 @@
         <Label Text="Toggles bar" Style="{StaticResource titleStyle}"/>
 
         <xamlly:TogglesBar ItemsSource="{Binding Options}" DisplayMemberPath="Name" SelectedColor="White" UnselectedColor="Gray" BackgroundColor="Black" 
-                           HorizontalOptions="Fill"/>
+                           HorizontalOptions="Fill" SelectedItems="{Binding SelectedOption}"/>
         <xamlly:TogglesBar IsMultiSelect="True" ItemsSource="{Binding Options}" DisplayMemberPath="Name" SelectedColor="White" UnselectedColor="Gray" 
                            BackgroundColor="Black" HorizontalOptions="Fill"/>
 
