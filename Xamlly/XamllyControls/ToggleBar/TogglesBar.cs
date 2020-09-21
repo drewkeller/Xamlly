@@ -16,8 +16,8 @@ namespace Xamlly.XamllyControls
 
     public class TogglesBar : ContentView
     {
-        ScrollView scrollContainer;
-        StackLayout stackContainer;
+        readonly ScrollView scrollContainer;
+        readonly StackLayout stackContainer;
         public event EventHandler<TogglesBarSelectionChangedEventArgs> SelectedItemsChanged;
 
         public TogglesBar()
